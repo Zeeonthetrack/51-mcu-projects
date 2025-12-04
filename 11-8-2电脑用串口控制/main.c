@@ -1,0 +1,25 @@
+#include <at89c51RC2.h>
+#include "Delay.h"
+#include "UART.h"
+
+
+
+void main()
+{
+	UART_Init();
+	while(1)
+	{
+	}
+}
+
+
+void UART_Routine() interrupt 4
+{
+	if(RI==1)
+	{
+		P2=SBUF;
+		UART_SendByte(SBUF);
+		RI=0;
+	}
+}
+
