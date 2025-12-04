@@ -5,3 +5,5 @@ void main()
 {
 	P2 = 0xFE;  //1111 1110
 }
+
+//my first git commit
